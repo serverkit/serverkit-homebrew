@@ -1,6 +1,18 @@
 # serverkit-homebrew
 [Serverkit](https://github.com/r7kamura/serverkit) plug-in for [Homebrew](http://brew.sh/).
 
+- [Installation](#installation)
+- [Resource](#resource)
+  - [homebrew_package](#homebrew_package)
+    - [Attributes](#attributes)
+    - [Example](#example)
+  - [homebrew_cask_package](#homebrew_cask_package)
+    - [Attributes](#attributes-1)
+    - [Example](#example-1)
+  - [homebrew_tap](#homebrew_tap)
+    - [Attributes](#attributes-2)
+    - [Example](#example-2)
+
 ## Installation
 ```rb
 gem "serverkit-homebrew"
