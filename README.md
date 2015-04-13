@@ -1,4 +1,4 @@
-# Serverkit::Homebrew
+# serverkit-homebrew
 [Serverkit](https://github.com/r7kamura/serverkit) plug-in for [Homebrew](http://brew.sh/).
 
 ## Installation
