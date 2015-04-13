@@ -4,7 +4,7 @@ module Serverkit
   module Resources
     class HomebrewTap < Base
       attribute :name, required: true, type: String
-      attribute :status, type: String, inclusion: { allow_nil: true, in: ["untapped"] }
+      attribute :state, type: String, inclusion: { allow_nil: true, in: ["untapped"] }
 
       # @note Override
       def apply
@@ -13,14 +13,14 @@ module Serverkit
 
       # @note Override
       def check
-        has_untapped_status? ^ check_command("brew tap | grep -E '^#{name}$'")
+        has_untapped_state? ^ check_command("brew tap | grep -E '^#{name}$'")
       end
 
       private
 
       # @return [String]
       def applied_action_name
-        if has_untapped_status?
+        if has_untapped_state?
           "untap"
         else
           "tap"
@@ -32,8 +32,8 @@ module Serverkit
         name
       end
 
-      def has_untapped_status?
-        status == "untapped"
+      def has_untapped_state?
+        state == "untapped"
       end
     end
   end

@@ -58,7 +58,7 @@ Make sure the specified GitHub repo is tapped (or untapped).
 #### Attributes
 - name - repository name (required)
 - options - command-line-options for `brew tap` and `brew untap`
-- status - pass `"untapped"` to make sure the repo is untapped
+- state - pass `"untapped"` to make sure the repo is untapped
 
 #### Example
 ```yaml
@@ -67,5 +67,5 @@ resources:
     name: caskroom/cask
   - type: homebrew_tap
     name: homebrew/versions
-    status: untapped
+    state: untapped
 ```
