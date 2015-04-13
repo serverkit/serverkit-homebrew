@@ -13,7 +13,7 @@
     - [Attributes](#attributes-2)
     - [Example](#example-2)
 
-## Installation
+## Install
 ```rb
 gem "serverkit-homebrew"
 ```
