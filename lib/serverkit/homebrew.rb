@@ -1,7 +1,4 @@
 require "serverkit/homebrew/version"
-
-module Serverkit
-  module Homebrew
-    # Your code goes here...
-  end
-end
+require "serverkit/resources/homebrew_cask_package"
+require "serverkit/resources/homebrew_package"
+require "serverkit/resources/homebrew_tap"
