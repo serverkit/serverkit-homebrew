@@ -1,3 +1,6 @@
+## 0.0.4
+- Support linuxbrew on homebrew_package resource
+
 ## 0.0.3
 - Rename: status -> state
 
