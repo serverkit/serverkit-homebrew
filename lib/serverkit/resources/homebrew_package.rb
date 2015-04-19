@@ -3,9 +3,25 @@ require "serverkit/resources/package"
 module Serverkit
   module Resources
     class HomebrewPackage < Package
-      # @note Override to use unnested name
+      # @note Override to force to use brew command
+      def apply
+        run_command(
+          ::Specinfra::Command::Darwin::Base::Package.install(
+            unnested_name,
+            version,
+            options,
+          ),
+        )
+      end
+
+      # @note Override to force to use brew command
       def check
-        check_command_from_identifier(:check_package_is_installed, unnested_name, version)
+        check_command(
+          ::Specinfra::Command::Darwin::Base::Package.check_is_installed(
+            unnested_name,
+            version,
+          ),
+        )
       end
 
       private
