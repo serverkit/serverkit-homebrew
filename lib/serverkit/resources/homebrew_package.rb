@@ -7,7 +7,7 @@ module Serverkit
       def apply
         run_command(
           ::Specinfra::Command::Darwin::Base::Package.install(
-            unnested_name,
+            name,
             version,
             options,
           ),
