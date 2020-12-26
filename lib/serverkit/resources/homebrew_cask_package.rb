@@ -13,7 +13,7 @@ module Serverkit
 
       # @note Override
       def check
-        check_command("brew cask list -1 | grep -E '^#{name}$'")
+        check_command("brew list --cask -1 | grep -E '^#{name}$'")
       end
 
       private
