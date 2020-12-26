@@ -8,7 +8,7 @@ module Serverkit
 
       # @note Override
       def apply
-        run_command("brew cask install #{options} #{name}")
+        run_command("brew install --cask #{options} #{name}")
       end
 
       # @note Override
