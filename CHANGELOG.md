@@ -1,3 +1,7 @@
+## 0.0.6
+
+- Fix homebrew-cask install error.
+
 ## 0.0.5
 
 - Fix bug on installation of nested package name.
